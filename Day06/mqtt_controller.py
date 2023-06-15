@@ -13,7 +13,6 @@ import Adafruit_DHT as dht
 
 import RPi.GPIO as GPIO
 
-
 sensor = dht.DHT11
 rcv_pin = 24
 green = 17
@@ -26,7 +25,7 @@ GPIO.setup(green, GPIO.OUT)
 GPIO.output(green, GPIO.HIGH)
 
 GPIO.setup(servo_pin, GPIO.OUT)
-pwm = GPIO.PWM(servo_pin, 100)
+pwm = GPIO.PWM(servo_pin, 50)
 pwm.start(3) 
 
 # SEND
